@@ -1,0 +1,294 @@
+:root {
+  --gold-500: hsl(39, 89%, 49%);
+  --gold-600: hsl(28, 76%, 44%);
+  --blue-500: hsl(230, 89%, 62%);
+  --blue-700: hsl(229, 64%, 46%);
+  --red-600: hsl(349, 71%, 52%);
+  --red-800: hsl(347, 75%, 35%);
+  --purple-600: hsl(261, 73%, 60%);
+  --purple-700: hsl(261, 51%, 44%);
+  --light-blue-400: hsl(189, 59%, 53%);
+  --light-blue-500: hsl(194, 58%, 42%);
+  --Navy-900: hsl(229, 25%, 31%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(23, 32, 65);
+}
+img {
+  display: block;
+}
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+  padding: 10px;
+}
+header {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(159, 159, 159);
+  border-radius: 10px;
+  padding: 20px;
+}
+main {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  position: relative;
+  margin-bottom: 10px;
+}
+header .score {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
+}
+header .score :last-child {
+  font-size: 40px;
+}
+header .score :first-child {
+  font-size: 21px;
+}
+main button {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+button img {
+  width: 60px;
+}
+#rock {
+  position: absolute;
+  bottom: -30px;
+  outline: 15px solid rgb(213, 66, 94);
+}
+#paper {
+  position: absolute;
+  top: -30px;
+  left: 60px;
+  outline: 15px solid rgb(84, 114, 247);
+}
+#scissors {
+  position: absolute;
+  top: -30px;
+  right: 60px;
+  outline: 15px solid rgb(235, 168, 37);
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer button {
+  padding: 0.75rem 3rem;
+  font-size: 21px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.result,
+.reset_btn {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+.result .result__1 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.result .result__2 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.win {
+  outline: 20px solid rgb(16, 232, 23);
+}
+.lose {
+  outline: 20px solid rgb(213, 66, 94);
+}
+.equal {
+  outline: 20px solid rgb(235, 168, 37);
+}
+.reset_btn {
+  justify-content: center;
+  align-items: center;
+}
+.reset_btn button {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  font-size: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+.reset_btn button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+h1 {
+  color: white;
+}
+.rules {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 30px 40px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+.rules h1 {
+  color: rgb(73, 75, 101);
+}
+.rules :first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rules :first-child button {
+  font-size: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.rules img {
+  margin-top: 50px;
+}
+@media (max-width: 450px) {
+  header {
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  header img {
+    width: 70%;
+    object-fit: cover;
+  }
+  header .score {
+    padding: 10px;
+  }
+  header .score :last-child {
+    font-size: 21px;
+  }
+  header .score :first-child {
+    font-size: 18px;
+  }
+  main {
+    width: 90%;
+    margin: 30px auto;
+  }
+  main button {
+    width: 70px;
+    height: 70px;
+  }
+  main button img {
+    width: 50px;
+  }
+  #triangle {
+    width: 100%;
+  }
+  #rock {
+    bottom: 0;
+  }
+  #paper {
+    left: 0;
+    top: 0;
+  }
+  #scissors {
+    top: 0;
+    right: 0;
+  }
+  footer {
+    margin-top: 100px;
+  }
+  footer button {
+    padding: 0.75rem 2rem;
+  }
+  .rules {
+    padding: 20px;
+    margin: 0;
+  }
+  .rules img {
+    width: 250px;
+  }
+  .result {
+    width: 90%;
+    margin-top: 50px;
+    position: relative;
+  }
+  .reset_btn {
+    width: 90%;
+    margin-top: 90px;
+  }
+  h1 {
+    font-size: 21px;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+  .result .result__1 {
+    width: 70px;
+    height: 70px;
+  }
+  .result .result__1 img {
+    width: 50px;
+  }
+  .win {
+    outline: 10px solid rgb(16, 232, 23);
+  }
+  .lose {
+    outline: 10px solid rgb(213, 66, 94);
+  }
+  .equal {
+    outline: 10px solid rgb(235, 168, 37);
+  }
+}
